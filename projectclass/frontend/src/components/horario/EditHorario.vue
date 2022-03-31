@@ -3,7 +3,7 @@
       <div class="row">
           <div class="col text-left">
               <br>
-              <h2>Editar Horario</h2>
+              <h2>Editar Horario de Clases</h2>
           </div>
       </div>
 
