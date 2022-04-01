@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 
+import Bienvenida from '@/components/Horario/Bienvenida'
+
 import NuevoHorario from '@/components/Horario/NuevoHorario'
 import ListHorario from '@/components/Horario/ListHorario'
 import EditHorario from '@/components/Horario/EditHorario'
@@ -26,6 +28,11 @@ export default new Router({
       path: '/horarios/nuevo',
       name: 'NuevoHorario',
       component: NuevoHorario
+    },
+    {
+      path: '/bienvenida',
+      name: 'Bienvenida',
+      component: Bienvenida
     },
     {
       path: '/horarios/:horarioId/edit',

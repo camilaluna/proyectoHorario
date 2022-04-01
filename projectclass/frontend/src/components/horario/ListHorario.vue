@@ -5,17 +5,15 @@
                 <br>
                 <h2 style="text-align:center">Horario de Clases</h2>
                 <div class="col text-right">
-                    <b-button size="sm" :to="{name: 'NuevoHorario'}" variant="primary">
-                        Nuevo Horario
-                    </b-button>
+                    <b-button pill variant="outline-success" :to="{name: 'NuevoHorario'}">Nuevo Horario</b-button>
                 </div>
                 <br>
                 <div class="col-md-12">
                     <b-table striped hover :items="horarios" :fields="fields">
 
                         <template v-slot:cell(action)="data">
-                            <b-button size="sm" variant="primary" :to="{ name:'EditHorario', params: {horarioId: data.item.id}}">Editar</b-button>
-                            <b-button size="sm" variant="danger" :to="{ name:'EliminarHorario', params: {horarioId: data.item.id}}">Eliminar</b-button>
+                            <b-button variant="outline-primary" :to="{ name:'EditHorario', params: {horarioId: data.item.id}}">Editar</b-button>
+                            <b-button variant="outline-danger" :to="{ name:'EliminarHorario', params: {horarioId: data.item.id}}">Eliminar</b-button>
                         </template>
 
                     </b-table>
@@ -33,7 +31,7 @@ export default {
         return {
             fields: [
                 {key: 'title', label: 'Día'},
-                {key: 'description', label: 'Detalle'},
+                {key: 'description', label: 'Asignaturas'},
                 {key: 'action', label: 'Acción a realizar'}
             ],
             horarios: []
